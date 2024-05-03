@@ -1,13 +1,15 @@
 import argparse
-import csvq
+import csv
+
 import pandas as pd
+
 
 # read data file
 def read_data(data_file):
     data = pd.read_csv(data_file, sep=';', header=None, names=['x','y','z'])
     return data
 
-df = read_data("test.csv")
+df = read_data("01_Skyline Operator/additional resources/test.csv")
 
 # check if p1 is dominated by p2
 def check_dominated(p1, p2, to_max, to_min):
