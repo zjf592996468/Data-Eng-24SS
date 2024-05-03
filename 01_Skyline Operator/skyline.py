@@ -17,12 +17,12 @@ def check_dominated(p1, p2, to_max, to_min):
     # check if in factors(higher is better) p1 is dominated by p2, if yes, dominated score plus one
     for f in to_max:
         if p1[f] < p2[f]:
-            dominated+=1
+            dominated_score+=1
     
     # check if in factors(lower is better) p1 is dominated by p2, if yes, dominated score plus one
     for f in to_min:
         if p1[f] > p2[f]:
-            dominated+=1
+            dominated_score+=1
     
     # if dominated score is 3, then p1 is dominated by p2
     if dominated_score == 3:
