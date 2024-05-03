@@ -9,10 +9,10 @@ def read_data(data_file):
 
 df = read_data("test.csv")
 
-# detect if one point dominates any others=>not dominated by other
+# check if p1 is dominated by p2
 def check_dominated(p1, p2, to_max, to_min):
-    # dominated score
-    dominated = 0
+    # set a dominated score
+    dominated_score = 0
 
     # check if in factors(higher is better) p1 is dominated by p2, if yes, dominated score plus one
     for f in to_max:
@@ -23,8 +23,12 @@ def check_dominated(p1, p2, to_max, to_min):
     for f in to_min:
         if p1[f] > p2[f]:
             dominated+=1
-
-    return dominated
+    
+    # if dominated score is 3, then p1 is dominated by p2
+    if dominated_score == 3:
+        return True
+    else:
+        return False
 
 
 def find_skyline_points(dataset):
@@ -36,7 +40,7 @@ def find_skyline_points(dataset):
         for index2,row2 in dataset.iterrows():
             if index != index2:
                 # if point is dominated by any point, then break
-                if check_dominated(row, row2, ['x','y'], ['z'])==3:
+                if check_dominated(row, row2, ['x','y'], ['z'])==True:
                     dominated_by = True
                     break
         if not dominated_by:
