@@ -16,6 +16,6 @@ Input the absolute path of input file and output file, then run the code in term
 
 `python skyline.py --input=r"**/test.csv" --output=r"**/result.csv"`
 
-or
+or for macOS
 
-`python3 skyline.py --input=r"**/test.csv" --output=r"**/result.csv"`
+`python skyline.py --input="**/test.csv" --output="**/result.csv"`
