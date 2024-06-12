@@ -14,8 +14,8 @@ Data engineering 24SS programming exercises
 
 Input the **absolute path** of input file and output file, then run the code in terminal:
 
-`python skyline.py --input="**/test.csv" --output="**/result.csv"`
+`python skyline.py --input="**/demo.csv" --output="**/result.csv"`
 
 or
 
-`python3 skyline.py --input="**/test.csv" --output="**/result.csv"`
+`python3 skyline.py --input="**/demo.csv" --output="**/result.csv"`
