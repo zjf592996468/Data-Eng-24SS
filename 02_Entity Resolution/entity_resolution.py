@@ -94,4 +94,5 @@ def find_duplicates(data, pairs):
             dupulicate_pairs.append(pair)
     return dupulicate_pairs
 
+# 19111 duplicates in result
 dupulicate_pairs = find_duplicates(data, pairs)
