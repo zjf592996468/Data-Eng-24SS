@@ -21,3 +21,12 @@ or
 `python3 skyline.py --input="**/demo.csv" --output="**/result.csv"`
 
 ## Task 02
+
+Run `entity.py`
+
+### Result:
+
+- Runtime: 318.2090s
+- Precision: 0.4555
+- Recall: 0.2260
+- F-measure: 0.3021
